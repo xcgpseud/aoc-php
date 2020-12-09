@@ -2,12 +2,16 @@
 
 namespace AOC\Helpers;
 
+use JetBrains\PhpStorm\Pure;
 use SplFileObject;
 
 class Input
 {
-    public static function readLines(string $file, callable $fn = null): array
-    {
+    #[Pure]
+    public static function readLines(
+        string $file,
+        callable $fn = null
+    ): array {
         $out = [];
 
         $file = new SplFileObject($file);

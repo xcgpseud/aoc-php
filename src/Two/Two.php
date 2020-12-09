@@ -55,8 +55,10 @@ class Two
         return $valid;
     }
 
-    #[Pure] private function fnRead(string $line): array
-    {
+    #[Pure]
+    private function fnRead(
+        string $line
+    ): array {
         [$left, $chars] = explode(": ", $line);
         [$nums, $char] = explode(' ', $left);;
         [$low, $high] = explode('-', $nums);
