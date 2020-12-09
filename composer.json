@@ -1,0 +1,17 @@
+{
+  "name": "xcgpseud/aoc-php",
+  "type": "library",
+  "license": "mit",
+  "authors": [
+    {
+      "name": "xcgpseud",
+      "email": "chris.evans92@hotmail.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "AOC\\": "src/"
+    }
+  }
+}
