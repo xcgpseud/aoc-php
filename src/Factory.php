@@ -3,6 +3,7 @@
 namespace AOC;
 
 use AOC\One\One;
+use AOC\Three\Three;
 use AOC\Two\Two;
 
 class Factory
@@ -17,5 +18,11 @@ class Factory
     {
         $two = new Two();
         $two->run();
+    }
+
+    public static function Three(): void
+    {
+        $three = new Three();
+        $three->run();
     }
 }
