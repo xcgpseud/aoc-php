@@ -42,7 +42,7 @@ class Six
             }
 
             $unique = array_unique($all);
-            $set = array_merge([$unique], Iter::from($group)->map(fn($v) => str_split($v))->get());
+            $set = array_merge([$unique], Iter::from($group)->map(fn(string $v): array => str_split($v))->get());
 
             $count += count(call_user_func_array("array_intersect", $set));
         }
