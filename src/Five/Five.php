@@ -37,8 +37,8 @@ class Five
         foreach ($lines as $line) {
             [$fbs, $lrs] = $line;
 
-            $row = $this->narrow1($fbs, 0, 127, 'F', 'B');
-            $col = $this->narrow1($lrs, 0, 7, 'L', 'R');
+            $row = $this->narrow1($fbs, 0, 127, 'F');
+            $col = $this->narrow1($lrs, 0, 7, 'L');
 
             $seats[] = $row * 8 + $col;
         }
@@ -54,7 +54,7 @@ class Five
         return 0;
     }
 
-    private function narrow1(string $seq, int $min, int $max, string $low, string $high): int
+    private function narrow1(string $seq, int $min, int $max, string $low): int
     {
         $chars = str_split($seq);
         $last = '';
