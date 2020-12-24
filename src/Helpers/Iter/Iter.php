@@ -11,6 +11,19 @@ class Iter
     {
     }
 
+    public function filter(Closure $fn): self
+    {
+        $out = [];
+
+        foreach ($this->get() as $val) {
+            if ($fn($val)) {
+                $out[] = $val;
+            }
+        }
+
+        return self::from($out);
+    }
+
     public function foldl1(Closure $fn): mixed
     {
         $out = $this->head();
@@ -23,8 +36,9 @@ class Iter
     }
 
     #[Pure]
-    public static function from(array|null $arr): static
-    {
+    public static function from(
+        array|null $arr
+    ): static {
         return new static($arr);
     }
 
