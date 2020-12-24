@@ -11,7 +11,7 @@ class One
         print(sprintf("One: %s\nTwo: %s\n", $this->solve1(), $this->solve2()));
     }
 
-    private function solve1(): int
+    public function solve1(): int
     {
         $lines = Input::readLines("src/One/input.txt", fn($line): int => (int) $line);
         $seen = [];
@@ -29,7 +29,7 @@ class One
         return -1;
     }
 
-    private function solve2(): int
+    public function solve2(): int
     {
         $lines = Input::readLines("src/One/input.txt", fn($line): int => (int) $line);
 

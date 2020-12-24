@@ -29,14 +29,14 @@ class Three
         return $trees;
     }
 
-    private function solve1(): int
+    public function solve1(): int
     {
         $lines = Input::readLines("src/Three/input.txt");
 
         return $this->slideAndCountTrees(3, 1, $lines);
     }
 
-    private function solve2(): int
+    public function solve2(): int
     {
         $lines = Input::readLines("src/Three/input.txt");
 

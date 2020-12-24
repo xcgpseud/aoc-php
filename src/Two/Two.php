@@ -12,7 +12,7 @@ class Two
         print(sprintf("One: %s\nTwo: %s\n", $this->solve1(), $this->solve2()));
     }
 
-    private function solve1(): int
+    public  function solve1(): int
     {
         $lines = Input::readLines("src/Two/input.txt", fn($line): array => $this->fnRead($line));
         $valid = 0;
@@ -30,7 +30,7 @@ class Two
         return $valid;
     }
 
-    private function solve2(): int
+    public function solve2(): int
     {
         $lines = Input::readLines("src/Two/input.txt", fn($line): array => $this->fnRead($line));
         $valid = 0;
